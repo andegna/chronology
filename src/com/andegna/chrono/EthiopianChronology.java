@@ -171,13 +171,7 @@ public class EthiopianChronology extends AbstractChronology {
      */
     @Override
     public EthiopianEra eraOf(int eraValue) {
-        switch (eraValue) {
-            case 0:
-                return EthiopianEra.AMETE_ALEM;
-            case 1:
-                return EthiopianEra.AMETE_MIHRET;
-        }
-        throw new DateTimeException("invalid Ethiopian era");
+        return EthiopianEra.eraOf(eraValue);
     }
 
     /**

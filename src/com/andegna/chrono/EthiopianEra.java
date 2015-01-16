@@ -1,6 +1,7 @@
 package com.andegna.chrono;
 
 import java.io.Serializable;
+import java.time.DateTimeException;
 import java.time.chrono.Era;
 
 /**
@@ -35,5 +36,15 @@ public enum EthiopianEra implements Era, Serializable {
         } else {
             return AMETE_ALEM;
         }
+    }
+
+    public static EthiopianEra eraOf(int eraValue) {
+        switch (eraValue) {
+            case 0:
+                return EthiopianEra.AMETE_ALEM;
+            case 1:
+                return EthiopianEra.AMETE_MIHRET;
+        }
+        throw new DateTimeException("invalid Ethiopian era");
     }
 }
