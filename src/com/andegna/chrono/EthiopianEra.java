@@ -13,8 +13,8 @@ public enum EthiopianEra implements Era, Serializable {
     AMETE_ALEM(0, -285019),
     AMETE_MIHRET(1, 1723856);
 
-    private int value;
-    private int epochOffset;
+    private final int value;
+    private final int epochOffset;
 
     private EthiopianEra(int value, int epochOffset) {
         this.value = value;
