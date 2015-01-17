@@ -178,6 +178,15 @@ public class EthiopianDate implements ChronoLocalDate, Serializable {
         return false;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 21;
+        hash = 97 * hash + this.year;
+        hash = 97 * hash + this.month;
+        hash = 97 * hash + this.day;
+        return hash;
+    }
+
     public boolean equals(EthiopianDate date) {
         return this.compareTo(date) == 0;
     }
